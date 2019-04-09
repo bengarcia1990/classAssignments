@@ -1,5 +1,3 @@
-
-
 var slideshow = {
     photoList: [
         "smile",
