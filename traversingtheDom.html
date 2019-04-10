@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <header>
+        <ul>
+            <li class="first">Item 1</li>
+            <li class="selected">Item 2</li>
+            <li class="last">Item 3</li>
+        </ul>
+    </header>
+    <div class="col">
+        <section>
+            <h2>Section 1</h2>
+        </section>
+        <section class="current">
+            <h2 class="highlight">Section 2</h2>
+        </section>
+        <section>
+            <h1>Section 2</h1>
+        </section>
+    </div>
+
+    <script src="traversingtheDom.js"></script>
+</body>
+
+</html>
+```
+<!-- 
+1. Get the header element
+2. Get all the section elements
+3. Get the section element with class="current"
+4. Get the section that comes after the current section
+5. Get the h2 node from the section before the 'current' section
+6. Get the div that contains the section that has an h2 with a class of 'highlight'
+8. Get all the sections that contain an H2 (using a single statement); -->
