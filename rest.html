@@ -1,0 +1,52 @@
+<!-- - Create buttons that do each of the tasks below
+- Render the results to the page in html elements.
+- Hide the results from the previous actions
+
+    - Get all posts
+    - Get post with id of 10
+    - Get the comments from post with id of 12 <br> *note: comments are part of a different data model, you'll need to structure your endpoint to ask for all of the comments that belong to post #12*
+    - Get all the posts from user with id of 2
+    - Create a new post and log the id generated for it by the server
+    - Replace the post with id of 12 and render the responseJSON
+    - Update the title of post with id of 12 and render responseJSON
+    - Delete the post with id of 12 and render a success message
+    - Display a list of posts.
+    	- When the user clicks on a post, display all the comments from that post
+        - Display a link back to all posts -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="all" type="submit">Get All Posts</button>
+    <button id="iD10" type="submit">Get Posts with ID 10</button>
+    <button id="user2Posts" type="submit">Get All Posts from User 2</button>
+    <button id="createPost" type="submit">Create New Post</button>
+    <button id="update12Title" type="submit">Update Post 12's Title</button>
+
+    <div>
+        <ul id="list">
+            <li></li>
+        </ul>
+        <!-- <button>Get Post With ID 10</button><br>
+    <button>Get Post From User ID 2</button><br>
+    <button>Creat New Post and Log ID on Server</button><br>
+    <button>Replace Post with ID 12 and render JSON</button>
+    <button>Update Post 12's Title and render JSON</button>
+    <button>Delete Post 12 and render Success</button>
+    <button>Display list of posts</button> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="rest.js"></script>
+</body>
+
+</html>
