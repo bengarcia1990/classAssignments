@@ -1,5 +1,7 @@
-**<h1>What we accomplished?</h1>** 
+# Sprint One Retrospective
 
+**What we accomplished?** 
+>---
 * Agility
 * Completed a __MVP__ version of the requirements
 * Help reinforce learned concepts
@@ -9,8 +11,8 @@
 
 
 
-**<h1>What we could have done better?</h1>**
-
+**What we could have done better?**
+>---
 * Held each other more accountable
 * More communication
 * Created flowchart/pseudocode when we first started
