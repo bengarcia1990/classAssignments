@@ -3,25 +3,59 @@ import '../CSS/Board.css';
 import Note from './Note';
 
 class Board extends Component {
-    // constructor() {
-    //     super();
-    // }
+    constructor() {
+        super();
+        this.state = {
+            notes: [
+                {
+                    title: "Class Notes",
+                    body: "Use constructors when extending another class"
+                },
+                {
+                    title: "My Address",
+                    body: "Nunya"
+                },
+                {
+                    title: "React Notes",
+                    body: "Everything in React is component"
+                }
+            ]
+        }
+    }
 
     render() {
         return (
             <div>
                 <div className="div-board">
                     <div className="row">
-                        <Note title="Class Notes" body="Use constructors when extending another class"></Note>
-                        <Note title="My Address" body="Nunya"></Note>
-                        <Note title="React Notes" body="Everything in React is component"></Note>
+                        {
+                            this.state.notes.map(note => {
+                                return <Note title={note.title} body={note.body} />
+                            })
+                        }
                     </div>
                     <div>
-                        <button className="btn btn-success add-button">Add</button>
+                        <button className="btn btn-success add-button" onClick={this.addNote.bind(this)}>Add</button>
                     </div>
                 </div>
             </div>
         );
+    }
+
+
+    addNote() {
+        this.state.notes.push(
+            {
+                title: "New Notes Title",
+                body: "New Notes Body"
+            }
+
+        );
+        this.setState(
+            {
+                notes: this.state.notes
+            }
+        )
     }
 }
 

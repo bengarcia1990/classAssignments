@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../CSS/Note.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class Note extends Component {
     // constructor() {
@@ -37,9 +37,9 @@ Note.defaultProps = {
     body: "a cool body"
 };
 
-Note.PropTypes = {
-    title: PropTypes.string,
-    body: PropTypes.string
+// Note.PropTypes = {
+//     title: PropTypes.string,
+//     body: PropTypes.string
 
-}
+// }
 export default Note;
