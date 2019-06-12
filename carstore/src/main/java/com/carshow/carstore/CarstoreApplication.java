@@ -40,7 +40,7 @@ public class CarstoreApplication {
                         log.info("");
                     });
 
-            repository.findbyModel("honda")
+            repository.findByModel("honda")
                             .forEach(customer -> {
                         log.info("Car found with findByModel(honda): ");
                         log.info("----------------------------------");
@@ -50,5 +50,4 @@ public class CarstoreApplication {
 
         };
     }
-
 }
