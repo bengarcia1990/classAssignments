@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron col-md-8 col-md-offset-2">
+        <h2>New Note</h2><br/>
+        <form th:action="@{/notes}" th:object="${note}" method="post" autocomplete="on" >
+            <div class="form-group">
+                <textarea rows="5" th:field="*{title}" placeholder="What's the title?"class="form-control"></textarea>
+                <textarea rows="5" th:field="*{message}" placeholder="What's happening?" class="form-control"></textarea>
+                <label th:if="${#fields.hasErrors('message')}" th:errors="*{message}" class="validation-message"></label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit">Create Note</button>
+            </div>
+        </form>
+        <div th:if="${successMessage}">
+            <h3><span class="text-success" th:utext="${successMessage}">Return to home</span></h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
